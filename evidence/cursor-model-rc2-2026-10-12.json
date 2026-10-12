@@ -24,7 +24,9 @@
       ".cursor-plugin/marketplace.json": "7789cdbd0b34ef0b0fa19d131995a5716b5ee05ad5acd63b25e40b3ecf9f5e38",
       "mcp.json": "16b92faf531eecc74511939c45b06f4c16859b3d3e6de207fa1f3bf776198688",
       "server/entry.cjs": "ea401cf8be2be2c2d1cb60bbe6ef416ee76cb48d1b0fa62fab225a21e36b4cd4"
-    }
+    },
+    "installed_cache_commit": "65cacb4bf4e636e67254f6a63b5ab30ed3050551",
+    "installed_cache_all_runtime_bytes_matched": true
   },
   "installation": {
     "route": "Customize > Plugins > Add > From Local Repository, select committed checkout, then Add beside DeadBolt, reload",
@@ -143,7 +145,8 @@
     "plugin_connection_absent_after_reload": true,
     "supervisor_stopped": true,
     "supervisor_credential_revoked_and_removed": true,
-    "state_and_evidence_preserved": true
+    "state_and_evidence_preserved": true,
+    "orphaned_proxy_and_dummy_process_stopped_explicitly": true
   },
   "not_tested_here": [
     "Independent third-party validation",
