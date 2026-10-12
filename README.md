@@ -38,6 +38,12 @@ the root plugin. After adding the source, select **Add** beside DeadBolt in the
 marketplace view, then return to Manage. Reload the window and confirm DeadBolt
 appears under MCPs with two setup tools before prompting the model.
 
+In Cursor 3.24.12 this UI installed the plugin at **account scope**, despite
+opening it in a named disposable editor profile. The uninstall confirmation
+explicitly covered the account, Grok Bot and cloud agents. Do not assume an
+editor profile isolates plugin installation; use dummy configuration for tests
+and remove the temporary plugin and marketplace source when finished.
+
 Use an actual Git checkout with a committed HEAD for this repository-import
 route. In Cursor 3.24.12, an unpacked folder could appear in the installed list
 but failed to resolve `deadbolt@HEAD`; its MCP tools and configuration schema
@@ -127,6 +133,16 @@ The suite runs the plugin's exported command; it does not install into a real
 Cursor profile or invoke a model. Directory review and model-mediated plugin
 acceptance are separate from these protocol checks. Native MCP connection/model
 checks with the separate bundle are different evidence.
+
+A [NextEleven-operated Cursor 3.24.12 model receipt](evidence/cursor-model-rc2-2026-10-12.json)
+records the actual local-repository install and Configure flow on macOS arm64:
+two read-only setup calls, then 13 gated model calls with five dummy marker
+effects and eight no-effect denials. It covers destination policy, off-policy
+tools, one-shot approval/replay, pause/resume, clip and kill. The model named the
+observed denial reasons. It does not establish independent validation,
+marketplace acceptance, or this plugin's model-mediated outage/deadline/restart
+behavior. Those remain separate checks. The temporary account-wide plugin,
+local marketplace source and operator credential were removed after the run.
 
 If startup fails, validate the configuration version, absolute paths, tool lists,
 future fixed deadline and live identity with the operator CLI. Diagnostics avoid
