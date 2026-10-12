@@ -1,54 +1,50 @@
 {
-  "engine_version": "1.0.3",
-  "engine_release": "https://github.com/seanebones-lang/deadbolt/releases/tag/v1.0.3",
+  "engine_version": "2.0.0-rc.2",
+  "engine_release": "https://github.com/seanebones-lang/deadbolt/releases/tag/v2.0.0-rc.2",
   "binaries": {
     "aarch64-apple-darwin": {
-      "version": "1.0.3",
-      "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+      "version": "2.0.0-rc.2",
+      "source_revision": "d166c7b039800bbd6d8acb1bc5c66f9add472f5f",
       "target": "aarch64-apple-darwin",
-      "builder_platform": "macOS-15.7.9-arm64-arm-64bit",
-      "binary_sha256": "8204438de4e10788efb1c8497ee59b52da305db19fc15b1bffb9752642251620",
+      "builder_platform": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+      "binary_sha256": "d0fb13d2fb8f85de2817b3cac11127241b230059ec9e381413ebf7a1005b3ea0",
       "distribution": "Developer ID signed; see release notes for notarization status",
       "signing_team_id": "L35VLYNTLK",
-      "signing_cdhash": "5339dc4e880606162385c4b6519167a513923e7a",
-      "archive_sha256": "d8af0582d347e56ae4d618f6ac2e4380d52b4b01ffc57a9e385e5cc33cc36a41",
-      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v1.0.3/deadbolt-1.0.3-aarch64-apple-darwin.zip"
+      "signing_cdhash": "f55e17861012ca5a56f87f0e6b2722bc49f3d853",
+      "archive_sha256": "26c33da31ba36b0753bfdc89e43913d1bd62c1ee102a59009b29a7b09967d689",
+      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v2.0.0-rc.2/deadbolt-2.0.0-rc.2-aarch64-apple-darwin.zip"
     },
     "x86_64-apple-darwin": {
-      "version": "1.0.3",
-      "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+      "version": "2.0.0-rc.2",
+      "source_revision": "d166c7b039800bbd6d8acb1bc5c66f9add472f5f",
       "target": "x86_64-apple-darwin",
-      "builder_platform": "macOS-15.7.9-x86_64-i386-64bit",
-      "binary_sha256": "3ac3920f54f03227c9873ea79c1feaebb8d8a14e1da7448edb025d226ac4dc8f",
+      "builder_platform": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+      "binary_sha256": "99fd75f8670b9f987d609b91bb3d0cc40d2488f7014f68ce1c940f8653fb233b",
       "distribution": "Developer ID signed; see release notes for notarization status",
       "signing_team_id": "L35VLYNTLK",
-      "signing_cdhash": "68821a1517946f6d07c34076aa78c2c284b9d198",
-      "archive_sha256": "3534804199a637e75f53179399f9130e86c53206dcc7cbfe2253fc6eae224f04",
-      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v1.0.3/deadbolt-1.0.3-x86_64-apple-darwin.zip"
+      "signing_cdhash": "fcd7b2fc77acf2326b6a8eed04484e84181c1ff1",
+      "archive_sha256": "abdf66e8a12ad120f88686a24fd76828e430dc9a39728ba078a89b8afe0abf3e",
+      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v2.0.0-rc.2/deadbolt-2.0.0-rc.2-x86_64-apple-darwin.zip"
     },
     "x86_64-unknown-linux-gnu": {
-      "version": "1.0.3",
-      "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+      "version": "2.0.0-rc.2",
+      "source_revision": "d166c7b039800bbd6d8acb1bc5c66f9add472f5f",
       "target": "x86_64-unknown-linux-gnu",
       "builder_platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.35",
-      "binary_sha256": "c9d3b4e21b732f07fe9799c466ca62033f1492909a1f2bd8f21de29f1a69a50d",
+      "binary_sha256": "78c3e631e2ae3463869de64315fa05f688fdc97a7dc7fd57c28165f8e1bf562e",
       "distribution": "unsigned native binary; verify checksums and source",
-      "archive_sha256": "6fbf51e9a58016a1a50b2dfd8496d8ddccc80b918d8ba59442b025fcb6029f5d",
-      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v1.0.3/deadbolt-1.0.3-x86_64-unknown-linux-gnu.zip"
+      "archive_sha256": "e8f1c581a5e75d81f1240574eb5b29a203aa7fbd4461adf2de77e60e6d1dbd9e",
+      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v2.0.0-rc.2/deadbolt-2.0.0-rc.2-x86_64-unknown-linux-gnu.zip"
     },
     "x86_64-pc-windows-msvc": {
-      "version": "1.0.3",
-      "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+      "version": "2.0.0-rc.2",
+      "source_revision": "d166c7b039800bbd6d8acb1bc5c66f9add472f5f",
       "target": "x86_64-pc-windows-msvc",
       "builder_platform": "Windows-2025Server-10.0.26100-SP0",
-      "binary_sha256": "d8adb7787692ebdb28cff371f4519a46ff95e6a8e427cc88553e1389d61ab505",
+      "binary_sha256": "d0a061e71aa7dd01005e1b63809d0f515c4930ed4213fdb66bacecb65bfe2ec1",
       "distribution": "unsigned native binary; verify checksums and source",
-      "archive_sha256": "6bdcb6901cf2c5e708d0d53e19bb97d4dc24354782de9b87a19883911604ebe0",
-      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v1.0.3/deadbolt-1.0.3-x86_64-pc-windows-msvc.zip"
+      "archive_sha256": "1981299078bacdc9e82a2da1bc9b693da085ffdec316de556857b321e01140ef",
+      "archive_url": "https://github.com/seanebones-lang/deadbolt/releases/download/v2.0.0-rc.2/deadbolt-2.0.0-rc.2-x86_64-pc-windows-msvc.zip"
     }
-  },
-  "bundle_version": "1.1.0",
-  "packaging_source_commit": "027dce7",
-  "packaging_source_url": "https://github.com/seanebones-lang/deadbolt/commit/027dce7",
-  "installed_bundle_ci": "https://github.com/seanebones-lang/deadbolt/actions/runs/38175605378"
+  }
 }

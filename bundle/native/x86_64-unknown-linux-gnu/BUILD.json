@@ -1,8 +1,8 @@
 {
-  "version": "1.0.3",
-  "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+  "version": "2.0.0-rc.2",
+  "source_revision": "d166c7b039800bbd6d8acb1bc5c66f9add472f5f",
   "target": "x86_64-unknown-linux-gnu",
   "builder_platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.35",
-  "binary_sha256": "c9d3b4e21b732f07fe9799c466ca62033f1492909a1f2bd8f21de29f1a69a50d",
+  "binary_sha256": "78c3e631e2ae3463869de64315fa05f688fdc97a7dc7fd57c28165f8e1bf562e",
   "distribution": "unsigned native binary; verify checksums and source"
 }
