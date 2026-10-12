@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "overall": "failed_and_incomplete",
+  "artifact": {
+    "commit": "bca65b913c24ed0194ad6929fec5a84f0c4db74f",
+    "plugin_version": "2.0.0-rc.2",
+    "bundle_version": "2.0.0-rc.2",
+    "engine_version": "2.0.0-rc.2",
+    "native_sha256": "d0fb13d2fb8f85de2817b3cac11127241b230059ec9e381413ebf7a1005b3ea0",
+    "cached_bytes_verified": true
+  },
+  "host": {
+    "os": "macOS 26.6.2",
+    "architecture": "arm64",
+    "cursor_version": "3.24.12",
+    "model_selection": "Auto",
+    "underlying_model_identity": null
+  },
+  "setup_model_calls": 2,
+  "gated_model_calls": 22,
+  "marker_effects": 9,
+  "denials": 13,
+  "protocol_checks": 26,
+  "protocol_idle_expiry_method": "SQL fixture; not elapsed idle time",
+  "gui_idle_expiry_method": "real elapsed 60-second supervised TTL after heartbeat stopped",
+  "failed_case": "c10-startup: Cursor Reload recreated a dropped leases table and reissued the same identity; a model call produced another marker",
+  "blocked_case": "c12-model: Agent quota prevented the actual model deadline call; startup deadline refusal was observed separately",
+  "passed_scope": [
+    "blank setup",
+    "tool/destination policy",
+    "one-use grant and replay",
+    "pause/resume",
+    "clip",
+    "kill and killed restart refusal",
+    "running store outage denial",
+    "real elapsed idle expiry and late-renewal refusal",
+    "observed live and terminal reconnect controls"
+  ],
+  "model_denial_visibility": "Readable reason text visible; isError and namespaced metadata validated separately by protocol test, not observed by model",
+  "operator_provenance": {
+    "independently_operated_user_reported": true,
+    "basis": "Sean clarified that a coworker operated the run through their own Codex. Original report describes owner-account and Codex-operated execution. Original report remains unchanged.",
+    "independent_certification": false,
+    "independent_operator_identity_verified": false
+  },
+  "source_report_sha256": "f00784a1248cb7609681f23fe3b3d09da21819f00a4e45852f1e8815e9f3ed91",
+  "evidence_manifest_files_verified": 144,
+  "published_marketplace_acceptance": false,
+  "correction_status": "Unreleased core source correction in PR 74; pinned RC2 artifacts are unchanged. Corrected packaged artifacts still require retesting."
+}

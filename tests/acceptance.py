@@ -221,7 +221,7 @@ process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:r.id,result})+'\\n');});
         finally:
             for proc in processes:
                 if proc.poll() is None: stop(proc)
-    return {'passed': True, 'platform': platform.system(), 'architecture': platform.machine(), 'scope': 'Exported Cursor plugin command and disposable protocol effects. No graphical/model-mediated Cursor test, no real accounts.', 'checks': checks, 'effect_calls': effect_results, 'operator_forced_idle_expiry': True, 'real_wall_clock_deadline': True}
+    return {'passed': True, 'platform': platform.system(), 'architecture': platform.machine(), 'scope': 'Exported Cursor plugin command and disposable protocol effects. No graphical/model-mediated Cursor test, no real accounts.', 'checks': checks, 'effect_calls': effect_results, 'operator_forced_idle_expiry': True, 'real_wall_clock_idle_expiry': False, 'idle_expiry_method': 'Disposable SQL timestamp edit, not elapsed time', 'real_wall_clock_deadline': True, 'graphical_client_tested': False, 'independent_review': False}
 
 
 if __name__ == '__main__':

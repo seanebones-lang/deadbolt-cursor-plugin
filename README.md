@@ -144,6 +144,25 @@ marketplace acceptance, or this plugin's model-mediated outage/deadline/restart
 behavior. Those remain separate checks. The temporary account-wide plugin,
 local marketplace source and operator credential were removed after the run.
 
+A [subsequent Cursor RC2 retest receipt](evidence/cursor-rc2-retest-2026-10-12.json)
+records two setup calls and 22 gated model calls: nine marker effects and 13
+denials. It confirms real elapsed idle expiry and running-store outage denial,
+but the overall result is **failed and incomplete**. After the store's `leases`
+table was dropped, Cursor Reload recreated it and reissued the same run identity;
+another actual model call wrote a marker. The model hard-deadline call was blocked
+by Agent quota, although startup past the deadline was refused. The core correction
+is [unreleased source in PR 74](https://github.com/seanebones-lang/deadbolt/pull/74);
+this plugin still pins the published RC2 bytes and must be retested with corrected
+artifacts. Sean identifies this later run as coworker-operated through their own
+Codex; the original report calls it owner-account and Codex-operated. That is
+separate execution evidence, not independent certification or marketplace approval.
+The host selected Auto; its underlying model identity was not established.
+
+The exported-command suite's `operator_forced_idle_expiry` checks edit the
+disposable SQL timestamp; they do not establish wall-clock idle expiry.
+`real_wall_clock_deadline` covers protocol calls and startup, not a model invocation.
+Actual-model and elapsed-idle receipts above remain separate evidence.
+
 If startup fails, validate the configuration version, absolute paths, tool lists,
 future fixed deadline and live identity with the operator CLI. Diagnostics avoid
 printing private paths, arguments and credentials. A missing or unsafe store fails
