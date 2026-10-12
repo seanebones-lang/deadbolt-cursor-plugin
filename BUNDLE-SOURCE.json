@@ -1,7 +1,7 @@
 {
-  "url": "https://github.com/seanebones-lang/deadbolt/releases/download/mcpb-v2.0.0-rc.3/deadbolt-2.0.0-rc.3.mcpb",
-  "sha256": "f0f4b95436419954e4ec07df2656c2b69c2ce8d7439d0cbf1c34ad8aabd111bd",
-  "bundle_version": "2.0.0-rc.3",
-  "engine_version": "2.0.0-rc.3",
-  "note": "bundle/ contains the exact published preview members. Plugin wrapper and metadata are separate; this is a developer-evaluation prerelease."
+  "url": "https://github.com/seanebones-lang/deadbolt/releases/download/mcpb-v2.0.0/deadbolt-2.0.0.mcpb",
+  "sha256": "50f9b7ac4c56f9a6cfa1c20e310b1a4970b373903edc0dd3faf4f5fb4173c977",
+  "bundle_version": "2.0.0",
+  "engine_version": "2.0.0",
+  "note": "bundle/ contains the exact stable MCPB members. Plugin wrapper and metadata are separate artifacts."
 }
