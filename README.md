@@ -3,8 +3,8 @@
 **Give agents tools. Keep control.** A free Apache-2.0 local MCP plugin from
 [NextEleven](https://www.nexteleven.dev/deadbolt).
 
-Plugin **2.0.0-rc.2** includes the exact published **MCP bundle 2.0.0-rc.2** and
-**engine 2.0.0-rc.2**. This is a developer-evaluation prerelease, replacing the
+Plugin **2.0.0-rc.3** includes the exact published **MCP bundle 2.0.0-rc.3** and
+**engine 2.0.0-rc.3**. This is a developer-evaluation prerelease, replacing the
 older plugin 1.0.0 candidate that carried engine 1.0.3. Plugin, bundle and engine
 versions are separate artifacts even when their version strings match.
 Stable promotion awaits independent artifact-pinned retesting.
@@ -55,7 +55,7 @@ Customize → Plugins and MCP. Review before enabling: the local process runs wi
 your user's privileges. Marketplace publication requires Cursor review; source
 availability does not establish acceptance.
 
-After updating an existing reviewed local copy, verify bundle/engine 2.0.0-rc.2
+After updating an existing reviewed local copy, verify bundle/engine 2.0.0-rc.3
 and back up operator state before upgrading. Do not downgrade to an engine that
 ignores newer fields and guarantees. Removing the plugin does not remove its
 separate operator state.
@@ -151,9 +151,10 @@ but the overall result is **failed and incomplete**. After the store's `leases`
 table was dropped, Cursor Reload recreated it and reissued the same run identity;
 another actual model call wrote a marker. The model hard-deadline call was blocked
 by Agent quota, although startup past the deadline was refused. The core correction
-is [unreleased source in PR 74](https://github.com/seanebones-lang/deadbolt/pull/74);
-this plugin still pins the published RC2 bytes and must be retested with corrected
-artifacts. Sean identifies this later run as coworker-operated through their own
+ships in the [RC3 engine](https://github.com/seanebones-lang/deadbolt/releases/tag/v2.0.0-rc.3)
+and [RC3 bundle](https://github.com/seanebones-lang/deadbolt/releases/tag/mcpb-v2.0.0-rc.3);
+this updated plugin pins those corrected bytes. The original RC2 receipt stays
+failed/incomplete; an actual-model RC3 reload/deadline retest is still required. Sean identifies this later run as coworker-operated through their own
 Codex; the original report calls it owner-account and Codex-operated. That is
 separate execution evidence, not independent certification or marketplace approval.
 The host selected Auto; its underlying model identity was not established.
@@ -196,8 +197,9 @@ deliberately choose to do so.
 DeadBolt does not send data to NextEleven. Cursor's model/service data handling
 and the downstream server's network activity and retention follow their own
 policies. The trusted downstream process inherits its normal local environment
-and user privileges; this plugin does not sanitize that environment or sandbox
-its network access. Review it before connecting accounts or personal data.
+and user privileges. DeadBolt removes its credentials and state-location environment
+variables before starting the downstream server; other application variables remain
+inherited. It does not sandbox network access. Review it before connecting accounts or personal data.
 No services are connected by default. Do not commit private configuration,
 credentials or local operator records to the plugin repository.
 
