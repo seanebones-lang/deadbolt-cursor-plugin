@@ -181,12 +181,17 @@ process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:r.id,result})+'\\n');});
             call('echo', False, 'purpose_exceeded')
             call('echo', False, 'purpose_exceeded', {'url': 'https://foreign.example/'})
             call('echo', True, arguments={'url': 'https://allowed.example/'})
+            call('echo', False, 'bad_request', {'url':'https://allowed.example/', 'host':'foreign.example'})
+            call('echo', False, 'bad_request', {'url':'https://allowed.example/', 'nested':[{'endpoint':'https://foreign.example/'}]})
+            passed('all_recognized_destinations_checked_before_any_effect')
             stop(proc); passed('all_routed_tools_require_allowed_destination_without_explicit_exception')
             config['offline_tools'] = ['echo']; file.write_text(json.dumps(config))
             proc = launch(str(file)); assert 'result' in rpc(proc, 'initialize')
             call('echo', True)
             call('echo', False, 'purpose_exceeded', {'url': 'https://foreign.example/'})
+            call('echo', False, 'bad_request', {'url':'https://allowed.example/', 'host':'foreign.example'})
             stop(proc); passed('explicit_offline_exception_does_not_override_declared_foreign_destination')
+            passed('offline_exception_does_not_bypass_conflicting_destination_refusal')
 
             config.update(agent='plugin-supervisor-run', renewal_mode='supervisor')
             file.write_text(json.dumps(config)); proc = launch(str(file))
@@ -218,6 +223,13 @@ process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:r.id,result})+'\\n');});
                 db.execute('DROP TABLE leases'); db.commit()
             call('echo', False, 'store_unavailable'); stop(proc)
             passed('running_connection_store_outage_denies_without_effect')
+            count, marker_count = starts.read_text(), effects.read_text()
+            proc = launch(str(file)); proc.wait(timeout=15)
+            assert proc.returncode != 0 and starts.read_text() == count and effects.read_text() == marker_count
+            stop(proc)
+            with closing(sqlite3.connect(config['database'])) as db:
+                assert not db.execute("SELECT 1 FROM sqlite_master WHERE name='leases'").fetchone()
+            passed('damaged_store_reconnect_refused_without_repair_or_new_downstream_effect')
         finally:
             for proc in processes:
                 if proc.poll() is None: stop(proc)

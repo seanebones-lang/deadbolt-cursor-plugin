@@ -17,8 +17,9 @@ deliberately choose to do so.
 DeadBolt does not send data to NextEleven. Cursor's model/service data handling
 and the downstream server's network activity and retention follow their own
 policies. The trusted downstream process inherits its normal local environment
-and user privileges; this plugin does not sanitize that environment or sandbox
-its network access. Review it before connecting accounts or personal data.
+and user privileges. DeadBolt removes its credentials and state-location environment
+variables before starting the downstream server; other application variables remain
+inherited. It does not sandbox network access. Review it before connecting accounts or personal data.
 No services are connected by default. Do not commit private configuration,
 credentials or local operator records to the plugin repository.
 
