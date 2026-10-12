@@ -1,2 +1,5 @@
 * text=auto eol=lf
 bundle/** -text
+
+# Preserve the checksum-pinned upstream legal notice, including its whitespace.
+bundle/THIRD-PARTY-NOTICES.txt whitespace=-blank-at-eol
