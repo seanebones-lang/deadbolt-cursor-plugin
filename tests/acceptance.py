@@ -36,6 +36,14 @@ def verify():
             assert release.read(name) == (ROOT / 'bundle' / name).read_bytes(), name
     passed("every_bundle_member_matches_the_pinned_published_archive")
     manifest = json.loads((ROOT / '.cursor-plugin/plugin.json').read_text())
+    marketplace = json.loads((ROOT / '.cursor-plugin/marketplace.json').read_text())
+    assert marketplace['name'] == 'nexteleven-deadbolt'
+    assert len(marketplace['plugins']) == 1
+    candidate = marketplace['plugins'][0]
+    assert candidate['name'] == manifest['name']
+    assert candidate['source'] == '.'
+    assert (ROOT / candidate['source'] / '.cursor-plugin/plugin.json').resolve() == (ROOT / '.cursor-plugin/plugin.json').resolve()
+    passed('local_repository_marketplace_resolves_the_exported_plugin')
     entry = json.loads((ROOT / 'mcp.json').read_text())['mcpServers']['deadbolt']
     assert manifest['variables']['properties']['DEADBOLT_OPERATOR_CONFIG']['default'] == ''
     assert not manifest['variables'].get('required')
