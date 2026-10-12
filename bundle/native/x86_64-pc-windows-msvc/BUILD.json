@@ -1,0 +1,8 @@
+{
+  "version": "1.0.3",
+  "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+  "target": "x86_64-pc-windows-msvc",
+  "builder_platform": "Windows-2025Server-10.0.26100-SP0",
+  "binary_sha256": "d8adb7787692ebdb28cff371f4519a46ff95e6a8e427cc88553e1389d61ab505",
+  "distribution": "unsigned native binary; verify checksums and source"
+}

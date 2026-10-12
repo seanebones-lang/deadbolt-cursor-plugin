@@ -1,0 +1,112 @@
+{
+  "host": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.35",
+  "target": "x86_64-unknown-linux-gnu",
+  "node_version": "v22.23.3",
+  "engine_version": "deadbolt 1.0.3",
+  "binary_sha256": "c9d3b4e21b732f07fe9799c466ca62033f1492909a1f2bd8f21de29f1a69a50d",
+  "launcher_sha256": "1cfaee841ef240835417da9f51eb083fdabee72e4006cfc0258297ef41c229f5",
+  "checks": [
+    {
+      "case": "official_mcpb_host_resolution_and_optional_setup_config",
+      "passed": true
+    },
+    {
+      "case": "read_only_setup_and_typed_tools",
+      "passed": true
+    },
+    {
+      "case": "read_only_setup_and_typed_tools_embedded",
+      "passed": true
+    },
+    {
+      "case": "supplied_missing_config_never_falls_back_to_setup",
+      "passed": true
+    },
+    {
+      "case": "echo:allow",
+      "body_ran": true
+    },
+    {
+      "case": "off_list:purpose_exceeded",
+      "body_ran": false
+    },
+    {
+      "case": "write_marker:needs_human",
+      "body_ran": false
+    },
+    {
+      "case": "write_marker:allow",
+      "body_ran": true
+    },
+    {
+      "case": "write_marker:needs_human",
+      "body_ran": false
+    },
+    {
+      "case": "echo:paused",
+      "body_ran": false
+    },
+    {
+      "case": "echo:allow",
+      "body_ran": true
+    },
+    {
+      "case": "echo:purpose_exceeded",
+      "body_ran": false
+    },
+    {
+      "case": "echo:killed",
+      "body_ran": false
+    },
+    {
+      "case": "inherited_state_and_credentials_ignored",
+      "passed": true
+    },
+    {
+      "case": "killed_restart_never_starts_configured_child",
+      "passed": true
+    },
+    {
+      "case": "invalid_configuration_never_starts_configured_child",
+      "cases": 6,
+      "passed": true
+    },
+    {
+      "case": "echo:allow",
+      "body_ran": true
+    },
+    {
+      "case": "echo:lease_expired",
+      "body_ran": false
+    },
+    {
+      "case": "expiry_forced_by_disposable_operator_store",
+      "passed": true
+    },
+    {
+      "case": "echo:allow",
+      "body_ran": true
+    },
+    {
+      "case": "off_list:purpose_exceeded",
+      "body_ran": false
+    },
+    {
+      "case": "write_marker:needs_human",
+      "body_ran": false
+    },
+    {
+      "case": "echo:killed",
+      "body_ran": false
+    },
+    {
+      "case": "embedded_import_host_stream_bridge_no_self_exec_and_killed_restart",
+      "passed": true
+    },
+    {
+      "case": "unavailable_store_never_starts_configured_child",
+      "passed": true
+    }
+  ],
+  "scope": "Real unpacked-bundle launcher, stdio JSON-RPC host and disposable fixture effects; no model/account access or GUI client installation. Other OS wrappers not executed in this run."
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+acceptance-report.json
+*.db
+*.jsonl
+.env*

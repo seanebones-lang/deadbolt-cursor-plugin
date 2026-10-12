@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "deadbolt": {
+      "command": "node",
+      "args": [
+        "${CURSOR_PLUGIN_ROOT}/server/entry.cjs"
+      ],
+      "env": {
+        "DEADBOLT_OPERATOR_CONFIG": "${DEADBOLT_OPERATOR_CONFIG}"
+      }
+    }
+  }
+}

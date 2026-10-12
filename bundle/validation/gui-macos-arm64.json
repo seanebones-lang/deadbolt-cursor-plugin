@@ -1,0 +1,17 @@
+{
+  "client": "Claude Desktop 2.19675.1",
+  "platform": "macOS ARM64",
+  "bundle_version": "1.1.0",
+  "setup_running_without_config": true,
+  "setup_tool_calls": 2,
+  "checksum_matches": true,
+  "active_protection": false,
+  "explicit_dummy_configuration_replaces_setup_tools": true,
+  "downstream_tools": [
+    "echo",
+    "write_marker",
+    "off_list"
+  ],
+  "removed_after_test": true,
+  "scope": "Real graphical setup calls and mode switching. Downstream allowed/denied effect regression is covered by four-platform stdio acceptance and prior bundle 1.0.1 graphical validation; no real accounts connected."
+}

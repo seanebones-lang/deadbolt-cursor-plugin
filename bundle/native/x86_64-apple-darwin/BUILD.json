@@ -1,0 +1,10 @@
+{
+  "version": "1.0.3",
+  "source_revision": "3a857f8438dcda4bdaadb414d37f128508dc44f1",
+  "target": "x86_64-apple-darwin",
+  "builder_platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "binary_sha256": "3ac3920f54f03227c9873ea79c1feaebb8d8a14e1da7448edb025d226ac4dc8f",
+  "distribution": "Developer ID signed; see release notes for notarization status",
+  "signing_team_id": "L35VLYNTLK",
+  "signing_cdhash": "68821a1517946f6d07c34076aa78c2c284b9d198"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "deadbolt",
+  "version": "1.0.0",
+  "description": "Read-only integration guidance and bundle verification; explicit private operator configuration enables a local MCP tool-call gate.",
+  "author": {
+    "name": "NextEleven LLC",
+    "email": "nextelevenstudios@gmail.com"
+  },
+  "homepage": "https://www.nexteleven.dev/deadbolt",
+  "repository": "https://github.com/seanebones-lang/deadbolt-cursor-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agents",
+    "mcp",
+    "permissions",
+    "local",
+    "developer-tools"
+  ],
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "DEADBOLT_OPERATOR_CONFIG": {
+        "type": "string",
+        "title": "Private operator configuration path",
+        "description": "Leave blank for read-only setup with no active protection. Supply an absolute private JSON path to gate a trusted downstream server. Invalid supplied paths stop startup.",
+        "default": ""
+      }
+    }
+  }
+}
