@@ -1,5 +1,6 @@
 """Exercise the exported plugin command, never a real account or model."""
 import hashlib
+from contextlib import closing
 import io
 import json
 import os
@@ -126,7 +127,9 @@ process.stdout.write(JSON.stringify({jsonrpc:'2.0',id:r.id,result})+'\\n');});
             operator('resume', '--agent', config['agent']); call('echo', True); passed('resume_restores_allowed_effect')
             operator('clip', 'echo', '--agent', config['agent']); call('echo', False); passed('clip_blocks_selected_tool')
             operator('resume', '--agent', config['agent'])
-            with sqlite3.connect(config['database']) as db: db.execute('UPDATE leases SET expires_at=0 WHERE agent_id=?', (config['agent'],))
+            with closing(sqlite3.connect(config['database'])) as db:
+                db.execute('UPDATE leases SET expires_at=0 WHERE agent_id=?', (config['agent'],))
+                db.commit()
             call('echo', False); passed('expired_lease_blocks_actual_effect')
             operator('kill', '--agent', config['agent']); call('echo', False); passed('terminal_kill_blocks_actual_effect')
             stop(proc)
