@@ -32,7 +32,18 @@ corruption, not independent certification or directory acceptance.
 
 ## Load a reviewed local candidate
 
-For local development, copy the entire repository to
+For **Customize → Plugins → Add → From Local Repository**, select a reviewed
+Git checkout of this repository. Its `.cursor-plugin/marketplace.json` indexes
+the root plugin. After adding the source, select **Add** beside DeadBolt in the
+marketplace view, then return to Manage. Reload the window and confirm DeadBolt
+appears under MCPs with two setup tools before prompting the model.
+
+Use an actual Git checkout with a committed HEAD for this repository-import
+route. In Cursor 3.24.12, an unpacked folder could appear in the installed list
+but failed to resolve `deadbolt@HEAD`; its MCP tools and configuration schema
+were unavailable. A successful import notification alone does not prove startup.
+
+Alternatively, for local development, copy the entire repository to
 `~/.cursor/plugins/local/deadbolt` using actual files, reload Cursor and inspect
 Customize → Plugins and MCP. Review before enabling: the local process runs with
 your user's privileges. Marketplace publication requires Cursor review; source
@@ -63,8 +74,10 @@ not establish this plugin's graphical discovery or variable expansion.
    `activity` is an explicit alternative: live admission renews idle TTL, while
    the fixed deadline never moves. The bundled example selects this alternative
    deliberately; it is not supervisor operation.
-4. Set the plugin's `DEADBOLT_OPERATOR_CONFIG` to the private absolute JSON path and
-   restart its MCP connection. Valid configuration replaces setup tools with
+4. In **Customize → Plugins → DeadBolt → Configure**, set the optional private
+   operator configuration path, save it, and reload the window. Use a distinct
+   private configuration filename for each fresh run and verify the actual tool
+   list in a new conversation. Valid configuration replaces setup tools with
    the downstream tools. Invalid or expired configuration stops before downstream
    startup; it never falls back to unprotected setup or silently revives a run.
 5. Verify disposable allowed and denied effects before connecting accounts.
