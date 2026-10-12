@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0-rc.3",
+  "plugin_commit": "87d5f67a46c6c25b68f9ee5e3920cfbccff024a7",
+  "bundle_sha256": "f0f4b95436419954e4ec07df2656c2b69c2ce8d7439d0cbf1c34ad8aabd111bd",
+  "engine_sha256": "fb2c69b99a20c0af05803322ecb704c618fde40f90bae4b73fe789dfd1dd8cfb",
+  "host": {
+    "os": "macOS 26.6.2",
+    "architecture": "arm64",
+    "cursor": "3.24.12",
+    "model": "Auto; underlying model unknown"
+  },
+  "operation": "coworker-operated through a separate Codex session; anonymous execution evidence",
+  "completed_routed_model_calls": 7,
+  "allowed_marker_effects": 3,
+  "denied_no_effect_calls": 4,
+  "requested_cases": {
+    "conflicting_destinations": "PASS",
+    "damaged_store_actual_reload": "PASS",
+    "actual_post_fixed_deadline_call": "PASS"
+  },
+  "scope": "Only this host and the three requested RC3 cases. Real-time idle expiry was not rerun for RC3. An initial connection timeout was excluded from the successful baseline. No certification or marketplace acceptance; not stable-byte GUI testing."
+}
