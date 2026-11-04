@@ -1,12 +1,27 @@
 # DeadBolt local MCP bundle
 
-This **2.0.0 stable bundle** includes the checksum-pinned published DeadBolt 2.0.0 executable and a dependency-free Node.js launcher. It is a separately versioned distribution artifact; existing stable 1.x bundles keep their original engine and behavior. Use disposable integration tests before connecting real effects.
+This **2.0.1 stable bundle** includes the checksum-pinned published DeadBolt 2.0.1 executable and a dependency-free Node.js launcher. It is a separately versioned distribution artifact; existing stable 1.x bundles keep their original engine and behavior. Use disposable integration tests before connecting real effects.
 
 ## Try read-only setup first
 
 Install and enable the bundle with **Operator configuration left blank**. Ask your agent to call `deadbolt_get_integration_guide` with your route (`claude_desktop`, `stdio_client`, `rust` or `http`), or call `deadbolt_check_bundle` to verify the packaged engine checksum on this host. Both return structured results, output schemas and read-only annotations. No accounts, operator state or downstream server are accessed. This mode provides **no active protection**. Checksum verification detects corruption relative to packaged metadata; it is not a security audit or independent signature verification.
 
 Supplying a configuration path switches to the actual protected downstream server: its generated tool list replaces these two setup tools. A missing, unreadable or malformed supplied file stops startup; it never silently falls back to setup. To return deliberately to setup, stop the extension, clear its setting and restart. Terminal/editor clients can run `node /absolute/bundle/server/launcher.cjs` without a configuration argument for setup, or pass the absolute configuration path for the gate.
+
+### Setup inputs and failures
+
+`deadbolt_get_integration_guide` requires an explicit supported `route`; there is
+no default route. `deadbolt_check_bundle` takes no arguments and chooses the
+native target from the current host. Both reject extra fields. Invalid tool
+arguments return `isError: true`; unknown tools return JSON-RPC error `-32602`.
+Missing or unreadable bundle metadata/executable returns `isError: true` and
+does not confirm integrity. An unsupported target or an executable checksum
+mismatch reports `checksum_matches: false`. A successful setup result always
+reports no active protection through its boundary; the bundle-check result also
+sets `active_protection: false`. Neither result authorizes an effect.
+
+See the [October evaluation notes](../../docs/EVALUATION-NOTES-2026-10.md) for
+the distinction between listing these tools and exercising configured enforcement.
 
 ## Configure the tool-call gate
 

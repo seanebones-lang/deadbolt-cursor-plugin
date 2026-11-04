@@ -19,7 +19,7 @@ documentation rather than mixing old binaries with current configuration.
 | Cargo CLI / embedded Rust | Rust 1.85+, native C compiler/linker | Engine or embedded library |
 | Python package | Python 3.9+, pip and a virtual environment | Dependency-free base client; native engine installed separately |
 | Optional SDK adapter | Python 3.10+ and openai-agents extra | Tested SDK 0.23.1 adapter |
-| [FastMCP recipe](FASTMCP.md) | Python 3.10+, FastMCP 4.1.0, matching client/engine | A gate inside each protected tool body |
+| [FastMCP recipe](FASTMCP.md) | Python 3.10+, FastMCP 4.1.2, matching client/engine | A gate inside each protected tool body |
 | Source Node client | Node.js; version 22 tested | CommonJS source module; no npm package required |
 | [Docker source build](DOCKER-MCP.md) | Docker Linux engine and reviewed source/configuration | Local stdio container; check that guide's explicit version and scope |
 
@@ -108,8 +108,8 @@ A directory listing is not a hosted operator endpoint or a certification.
 
 ## Cargo registry CLI and embedded Rust
 
-Once 2.0.0 is visible on [crates.io](https://crates.io/crates/n11-deadbolt), install
-with the reviewed package lockfile:
+[Stable 2.0.0 is published on crates.io](https://crates.io/crates/n11-deadbolt/2.0.0).
+Install with the reviewed package lockfile:
 
 ```sh
 cargo install n11-deadbolt --version 2.0.0 --locked --bin deadbolt
@@ -131,7 +131,7 @@ requires no publishing token. Commit your application's own Cargo.lock and use
 
 ## Published source
 
-Use the release tag once published, or a reviewed exact source revision:
+Use the published stable release tag, or its exact source revision:
 
 ```sh
 git clone --branch v2.0.0 --depth 1 https://github.com/seanebones-lang/deadbolt.git
@@ -149,7 +149,7 @@ Replacing an existing Cargo binary requires intentional `--force` after backup.
 
 ## Python and Node
 
-When the matching 2.0.0 package is visible on PyPI, in your application's environment:
+Install the [published 2.0.0 client](https://pypi.org/project/n11-deadbolt-client/2.0.0/) in your application's environment:
 
 ```sh
 python3 -m venv .venv
@@ -181,8 +181,7 @@ deadbolt --version
 deadbolt drill
 ```
 
-Check the [tap guide](HOMEBREW.md) and cask version before installing; promotion
-is separate from GitHub publication. The preview cask remains a distinct channel
+The [stable tap](HOMEBREW.md) installs version 2.0.0; check the cask version before upgrading. The preview cask remains a distinct channel
 and cannot coexist with the stable cask. Installation does not start a service.
 
 ## Choose the transport and authority

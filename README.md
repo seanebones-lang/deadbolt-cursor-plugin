@@ -3,7 +3,7 @@
 **Give agents tools. Keep control.** A free Apache-2.0 local MCP plugin from
 [NextEleven](https://www.nexteleven.dev/deadbolt).
 
-Plugin **2.0.0** includes MCP bundle **2.0.0** and the stable engine **2.0.0**.
+Plugin **2.0.1** includes MCP bundle **2.0.1** and the stable engine **2.0.1**.
 Every vendored member is pinned to the separately published bundle. Plugin,
 bundle and engine remain separate artifacts even when versions match.
 This source update does not establish official marketplace acceptance.
@@ -54,13 +54,18 @@ Customize → Plugins and MCP. Review before enabling: the local process runs wi
 your user's privileges. Marketplace publication requires Cursor review; source
 availability does not establish acceptance.
 
-After updating an existing reviewed local copy, verify bundle/engine 2.0.0
-and back up operator state before upgrading. Do not downgrade to an engine that
+Back up operator state before upgrading. After updating an existing reviewed local
+copy, reload Cursor and use `deadbolt_check_bundle` in a separate read-only setup
+connection to verify bundle/engine **2.0.1**.
+An older result means Cursor still loads an older copy. Updating the standalone
+CLI does not update this plugin's packaged engine. If needed, remove the old plugin
+and re-add the reviewed repository using the route above; retain the separate
+operator state. Do not downgrade to an engine that
 ignores newer fields and guarantees. Removing the plugin does not remove its
 separate operator state.
 
 If Configure is unavailable, use the
-[stable 2.0.0 editor helper](https://seanebones-lang.github.io/deadbolt/editors-v2.html)
+[editor helper](https://seanebones-lang.github.io/deadbolt/editors-v2.html)
 to add a normal local MCP connection. Do not run both connections against the
 same identity. Native MCP connection/model checks with that separate helper do
 not establish this plugin's graphical discovery or variable expansion.
