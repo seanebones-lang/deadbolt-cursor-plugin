@@ -1,10 +1,10 @@
 {
-  "version": "2.0.0",
-  "source_revision": "14804f2d512ce814a11de80daa8ca858b1dc7598",
+  "version": "2.0.1",
+  "source_revision": "e87519f700be03c27a564ed274907649224d256f",
   "target": "x86_64-apple-darwin",
   "builder_platform": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
-  "binary_sha256": "8896bf0200058b653af53b66231c9843e4aa9557a056aa194c3b2b5e76c3cc41",
+  "binary_sha256": "01e42b3c38e7c1c6a11aa6f2f22c5e19a6af2c634cb9ae7c67cdaebee7e4990c",
   "distribution": "Developer ID signed; see release notes for notarization status",
   "signing_team_id": "L35VLYNTLK",
-  "signing_cdhash": "ed4557ddbf48d9a96d5f328cdb25bfce58c79585"
+  "signing_cdhash": "d82c48b73e2801133cdea66f9f80d794f3ec7dff"
 }
