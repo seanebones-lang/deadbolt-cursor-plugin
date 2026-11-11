@@ -1,8 +1,8 @@
 {
-  "version": "2.0.1",
-  "source_revision": "e87519f700be03c27a564ed274907649224d256f",
+  "version": "2.0.2",
+  "source_revision": "7d130e882d03b9ba82556fb072f646d4191bbe8a",
   "target": "x86_64-pc-windows-msvc",
   "builder_platform": "Windows-2025Server-10.0.26100-SP0",
-  "binary_sha256": "0201b958699ff254e7761ce88baa97b1662d6676670aa1a6aeb7c7743f62866c",
+  "binary_sha256": "59ec4e19ef035d6c7dfe170c8c3ee1d76e28e53f29c78930e6cc55fbb12604bd",
   "distribution": "unsigned native binary; verify checksums and source"
 }
